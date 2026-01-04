@@ -1,0 +1,53 @@
+//
+//  ImageView+Extension.swift
+//  BrittsImperial
+//
+//  Created by Khuss on 30/11/23.
+//
+
+import Foundation
+import UIKit
+
+let imageCache = NSCache<NSString, UIImage>()
+
+extension UIImageView {
+
+    func loadImageUsingCacheWithURLString(_ URLString: String, placeHolder: UIImage?) {
+
+        self.image = nil
+        if let cachedImage = imageCache.object(forKey: NSString(string: URLString)) {
+            self.image = cachedImage
+            return
+        }
+
+        if let url = URL(string: URLString) {
+            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+
+                //print("RESPONSE FROM API: \(response)")
+                if error != nil {
+                    print("ERROR LOADING IMAGES FROM URL: \(String(describing: error))")
+                    DispatchQueue.main.async { [weak self] in
+                        self?.image = placeHolder
+                    }
+                    return
+                }
+                DispatchQueue.main.async { [weak self] in
+                    if let data = data {
+                        if let downloadedImage = UIImage(data: data) {
+                            imageCache.setObject(downloadedImage, forKey: NSString(string: URLString))
+                            self?.image = downloadedImage
+                        }
+                    }
+                }
+            }).resume()
+        }else{
+            self.image = placeHolder
+        }
+    }
+}
+
+extension UIImage {
+    func toBase64() -> String? {
+        return self.jpegData(compressionQuality: 1.0)?.base64EncodedString(options: .lineLength64Characters)
+    }
+}

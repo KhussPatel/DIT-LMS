@@ -1,0 +1,24 @@
+{
+  "originHash" : "c0b8ee330ecd8476690fabb8b482f14bf8271e390d75ab05c6dd8f1f7423c92b",
+  "pins" : [
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "b62cb63bf4ed1f04c961a56c9c6c9d5ab8524ec6",
+        "version" : "5.21.1"
+      }
+    },
+    {
+      "identity" : "swiftqrcodescanner",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vinodiOS/SwiftQRCodeScanner.git",
+      "state" : {
+        "revision" : "fddcabcb431cd6110cea0394660082661dbafa7e",
+        "version" : "1.16.0"
+      }
+    }
+  ],
+  "version" : 3
+}
