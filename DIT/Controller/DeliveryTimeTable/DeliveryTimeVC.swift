@@ -34,16 +34,25 @@ class DeliveryTimeVC: UIViewController {
                     }
                     
                     
+                    if self.dTimetable.isEmpty {
+                        // Call the extension method
+                        self.tblDelivery.setEmptyMessage("No data available")
+                    } else {
+                        // Clear the message if data exists
+                        self.tblDelivery.restore()
+                    }
                     
                     print("Decoded Person: \(responseModel)")
                 } catch {
                     print("Error decoding data: \(error)")
+                    self.tblDelivery.setEmptyMessage("No data available")
                 }
                 
                 print("JSON Response: \(jsonData)")
             case .failure(let error):
                 // Handle the error here
                 print("Error: \(error.localizedDescription)")
+                self.tblDelivery.setEmptyMessage("No data available")
             }
         }
     }

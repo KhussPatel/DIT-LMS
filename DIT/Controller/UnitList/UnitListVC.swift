@@ -63,20 +63,32 @@ class UnitListVC: UIViewController {
                         self.arrUnitList = self.removeDuplicates(from: filteredUnits)
                         //self.arrUnitList = filteredUnits
                         
+                        
+                        if self.arrUnitList.isEmpty {
+                            // Call the extension method
+                            self.tblAssignment.setEmptyMessage("No data available")
+                        } else {
+                            // Clear the message if data exists
+                            self.tblAssignment.restore()
+                        }
+                        
                         self.tblAssignment.reloadData()
                         
                         self.lblTitle.text = "Total \(self.arrUnitList.count) Unit's"
-                    }
+                    }else{self.tblAssignment.setEmptyMessage("No data available")}
                     
                     print("Decoded Person: \(responseModel)")
                 } catch {
                     print("Error decoding data: \(error)")
+                    
+                    self.tblAssignment.setEmptyMessage("No data available")
                 }
                 
                 print("JSON Response: \(jsonData)")
             case .failure(let error):
                 // Handle the error here
                 print("Error: \(error.localizedDescription)")
+                self.tblAssignment.setEmptyMessage("No data available")
             }
         }
     }
