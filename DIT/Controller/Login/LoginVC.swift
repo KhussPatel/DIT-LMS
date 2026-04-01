@@ -175,7 +175,8 @@ extension LoginVC{
             <student_login_by_email xmlns="http://tempuri.org/">
               <email>\(txtEmail.text ?? "")</email>
             <pass>\(txtPass.text ?? "")</pass>
-              <device_id></device_id>
+                    <device_id>\(UserDefaultsHelper.getNotificationToken() ?? "")</device_id>
+
               <from></from>
             </student_login_by_email>
           </soap:Body>

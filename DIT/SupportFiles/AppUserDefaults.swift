@@ -34,6 +34,7 @@ class UserDefaultsHelper {
         
         static let isFullView = "isFullView"
         static let isAcceptPP = "isAcceptPP" // Is accept Privacy policy
+        static let notificationToken = "notificationToken"
     }
 
     // MARK: - Student Email
@@ -51,6 +52,13 @@ class UserDefaultsHelper {
     }
     static func getStudentEmail() -> String? {
         return UserDefaults.standard.string(forKey: Keys.studentEmail)
+    }
+    
+    static func setNotificationToken(_ value: String) {
+        UserDefaults.standard.set(value, forKey: Keys.notificationToken)
+    }
+    static func getNotificationToken() -> String? {
+        return UserDefaults.standard.string(forKey: Keys.notificationToken)
     }
     
     static func setStudentUserName(_ value: String) {

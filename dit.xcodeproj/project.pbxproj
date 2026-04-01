@@ -30,7 +30,9 @@
 		0D12EF272E17AB5E000B079E /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D12EF102E17AB5E000B079E /* Poppins-MediumItalic.ttf */; };
 		0D12EF282E17AB5E000B079E /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D12EF112E17AB5E000B079E /* Poppins-Regular.ttf */; };
 		0D12EF292E17AB5E000B079E /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D12EF0F2E17AB5E000B079E /* Poppins-Medium.ttf */; };
+		0D24DB9A2F7D882100272402 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D24DB992F7D882100272402 /* GoogleService-Info.plist */; };
 		0D2AB9AB2E447236001BFF41 /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AB9AA2E447236001BFF41 /* PrivacyPolicyVC.swift */; };
+		0D2D43D22F7D86CF00975FFD /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0D2D43D12F7D86CF00975FFD /* FirebaseMessaging */; };
 		0D9AD6DC2E54618500AB2069 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AD6DB2E54618300AB2069 /* LocationHelper.swift */; };
 		0D9AD6DE2E5477CC00AB2069 /* AttendanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AD6DD2E5477CB00AB2069 /* AttendanceHelper.swift */; };
 		0DCC47942E49AC370024D1C7 /* SwiftQRCodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 0DCC47932E49AC370024D1C7 /* SwiftQRCodeScanner */; };
@@ -231,7 +233,9 @@
 		0D12EF132E17AB5E000B079E /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		0D12EF142E17AB5E000B079E /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		0D12EF152E17AB5E000B079E /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		0D24DB992F7D882100272402 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0D2AB9AA2E447236001BFF41 /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
+		0D2D43CE2F7D85E500975FFD /* dit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = dit.entitlements; path = dit/dit.entitlements; sourceTree = "<group>"; };
 		0D9AD6DB2E54618300AB2069 /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		0D9AD6DD2E5477CB00AB2069 /* AttendanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceHelper.swift; sourceTree = "<group>"; };
 		189D15D65A224C08C29776E7 /* Pods-dit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dit.debug.xcconfig"; path = "Target Support Files/Pods-dit/Pods-dit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -434,6 +438,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D2D43D22F7D86CF00975FFD /* FirebaseMessaging in Frameworks */,
 				92E9AF7B2C35B78300B72817 /* SDWebImage in Frameworks */,
 				0DCC47942E49AC370024D1C7 /* SwiftQRCodeScanner in Frameworks */,
 				1FA81D4773714529D4A6ED7C /* Pods_dit.framework in Frameworks */,
@@ -575,6 +580,7 @@
 		921EDA412AC1E94C007BCADE = {
 			isa = PBXGroup;
 			children = (
+				0D2D43CE2F7D85E500975FFD /* dit.entitlements */,
 				921EDA4C2AC1E94D007BCADE /* DIT */,
 				921EDA4B2AC1E94D007BCADE /* Products */,
 				53FD99B7994EB8BD3DD0698C /* Pods */,
@@ -599,6 +605,7 @@
 				921EDA682AC1F94B007BCADE /* Library */,
 				921EDA612AC1F035007BCADE /* SupportFiles */,
 				921EDA562AC1E950007BCADE /* Assets.xcassets */,
+				0D24DB992F7D882100272402 /* GoogleService-Info.plist */,
 				921EDA5B2AC1E950007BCADE /* Info.plist */,
 			);
 			path = DIT;
@@ -1029,6 +1036,7 @@
 			packageProductDependencies = (
 				92E9AF7A2C35B78300B72817 /* SDWebImage */,
 				0DCC47932E49AC370024D1C7 /* SwiftQRCodeScanner */,
+				0D2D43D12F7D86CF00975FFD /* FirebaseMessaging */,
 			);
 			productName = BrittsImperial;
 			productReference = 921EDA4A2AC1E94D007BCADE /* dit.app */;
@@ -1060,6 +1068,7 @@
 			packageReferences = (
 				92E9AF792C35B78300B72817 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				0DCC47922E49AC370024D1C7 /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */,
+				0D2D43D02F7D86CF00975FFD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 921EDA4B2AC1E94D007BCADE /* Products */;
@@ -1131,6 +1140,7 @@
 				921BBBAF2C4BB3F9001082BE /* OpenSans-Light.ttf in Resources */,
 				921BBBB02C4BB3F9001082BE /* ABeeZee-Regular.ttf in Resources */,
 				921BBBC32C4BB3F9001082BE /* ABeeZee-Italic.ttf in Resources */,
+				0D24DB9A2F7D882100272402 /* GoogleService-Info.plist in Resources */,
 				921BBBC52C4BB3F9001082BE /* OpenSans_SemiCondensed-MediumItalic.ttf in Resources */,
 				921BBBAE2C4BB3F9001082BE /* OpenSans_Condensed-ExtraBold.ttf in Resources */,
 				921BBBC02C4BB3F9001082BE /* OpenSans-Regular.ttf in Resources */,
@@ -1472,9 +1482,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = dit/dit.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4JAUP7MTYJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BrittsImperial/Info.plist;
@@ -1494,7 +1505,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dit.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1514,9 +1525,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = dit/dit.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4JAUP7MTYJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BrittsImperial/Info.plist;
@@ -1536,7 +1548,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dit.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1574,6 +1586,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0D2D43D02F7D86CF00975FFD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.11.0;
+			};
+		};
 		0DCC47922E49AC370024D1C7 /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/vinodiOS/SwiftQRCodeScanner.git";
@@ -1593,6 +1613,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0D2D43D12F7D86CF00975FFD /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0D2D43D02F7D86CF00975FFD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
 		0DCC47932E49AC370024D1C7 /* SwiftQRCodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0DCC47922E49AC370024D1C7 /* XCRemoteSwiftPackageReference "SwiftQRCodeScanner" */;

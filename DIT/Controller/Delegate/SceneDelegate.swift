@@ -210,7 +210,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             <student_login_by_email xmlns="http://tempuri.org/">
               <email>\(UserDefaultsHelper.getStudentUserName() ?? "")</email>
             <pass>\(UserDefaultsHelper.getStudentPassword() ?? "")</pass>
-              <device_id></device_id>
+                    <device_id>\(UserDefaultsHelper.getNotificationToken() ?? "")</device_id>
               <from></from>
             </student_login_by_email>
           </soap:Body>
